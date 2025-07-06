@@ -1,5 +1,6 @@
 interface SearchProps {
     searchTerm: string;
+    setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const Search = (props: SearchProps) => {
