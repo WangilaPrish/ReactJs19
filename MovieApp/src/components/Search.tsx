@@ -1,8 +1,10 @@
+interface SearchProps {
+    searchTerm: string;
+}
 
-
-const Search = () => {
+const Search = (props: SearchProps) => {
     return (
-        <div>Search</div>
+        <div className="text-white text-3xl">{props.searchTerm}</div>
     )
 }
 
