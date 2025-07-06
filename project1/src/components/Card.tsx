@@ -15,7 +15,7 @@ const Card = ({ title, description, imageUrl, link }: CardProps) => {
             <p>{description}</p>
             <p>{link}</p>
             <button
-                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
+                className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 cursor-pointer transition duration-300"
             >
                 <FaHeart className="inline mr-2" />
                 Like
