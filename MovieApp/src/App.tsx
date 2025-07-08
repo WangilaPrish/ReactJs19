@@ -23,7 +23,16 @@ const App = () => {
     const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('')
     const [searchTerm, setSearchTerm] = useState('');
 
-    const [movieList, setMovieList] = useState([]);
+    type Movie = {
+        id: number;
+        title: string;
+        poster_path?: string;
+        vote_average: number;
+        release_date: string;
+        original_language: string;
+        // Add other properties as needed.
+    };
+    const [movieList, setMovieList] = useState<Movie[]>([]);
     const [errorMessage, setErrorMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
