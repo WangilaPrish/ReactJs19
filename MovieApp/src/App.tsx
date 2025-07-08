@@ -17,3 +17,14 @@ const API_OPTIONS = {
         Authorization: `Bearer ${API_KEY}`
     }
 }
+
+
+const App = () => {
+    const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('')
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const [movieList, setMovieList] = useState([]);
+    const [errorMessage, setErrorMessage] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+
+    const [trendingMovies, setTrendingMovies] = useState([]);
