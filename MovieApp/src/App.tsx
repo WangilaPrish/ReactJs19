@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import Search from './components/Search.jsx'
 import Spinner from './components/Spinner.tsx'
-import MovieCard from './components/MovieCard.jsx'
+import MovieCard from './components/MovieCard.tsx'
 import { useDebounce } from 'react-use'
 import { getTrendingMovies, updateSearchCount } from './appwrite.js'
 
