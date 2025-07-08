@@ -27,7 +27,13 @@ const App = () => {
     const [errorMessage, setErrorMessage] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
-    const [trendingMovies, setTrendingMovies] = useState([]);
+    type TrendingMovie = {
+        $id: string;
+        poster_url: string;
+        title: string;
+        // add other properties if needed
+    };
+    const [trendingMovies, setTrendingMovies] = useState<TrendingMovie[]>([]);
 
     useDebounce(() => setDebouncedSearchTerm(searchTerm), 500, [searchTerm])
 
