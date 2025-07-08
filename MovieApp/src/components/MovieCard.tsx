@@ -1,7 +1,17 @@
-import React from 'react'
+type Movie = {
+    title: string;
+    vote_average: number;
+    poster_path: string;
+    release_date: string;
+    original_language: string;
+};
 
-const MovieCard = ({ movie:
-    { title, vote_average, poster_path, release_date, original_language }
+type MovieCardProps = {
+    movie: Movie;
+};
+
+const MovieCard: React.FC<MovieCardProps> = ({
+    movie: { title, vote_average, poster_path, release_date, original_language }
 }) => {
     return (
         <div className="movie-card">
