@@ -106,3 +106,24 @@ const App = () => {
                         </ul>
                     </section>
                 )}
+                <section className="all-movies">
+                    <h2>All Movies</h2>
+
+                    {isLoading ? (
+                        <Spinner />
+                    ) : errorMessage ? (
+                        <p className="text-red-500">{errorMessage}</p>
+                    ) : (
+                        <ul>
+                            {movieList.map((movie) => (
+                                <MovieCard key={movie.id} movie={movie} />
+                            ))}
+                        </ul>
+                    )}
+                </section>
+            </div>
+        </main>
+    )
+}
+
+export default App
