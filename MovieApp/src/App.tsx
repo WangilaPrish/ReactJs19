@@ -26,7 +26,7 @@ const App = () => {
     type Movie = {
         id: number;
         title: string;
-        poster_path?: string;
+        poster_path: string;
         vote_average: number;
         release_date: string;
         original_language: string;
@@ -67,7 +67,12 @@ const App = () => {
                 return;
             }
 
-            setMovieList(data.results || []);
+            setMovieList(
+                (data.results || []).map((movie: any) => ({
+                    ...movie,
+                    poster_path: movie.poster_path ?? ''
+                }))
+            );
 
             if (query && data.results.length > 0) {
                 await updateSearchCount(query, data.results[0]);
