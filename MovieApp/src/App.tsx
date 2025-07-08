@@ -64,3 +64,12 @@ const App = () => {
             setIsLoading(false);
         }
     }
+    const loadTrendingMovies = async () => {
+        try {
+            const movies = await getTrendingMovies();
+
+            setTrendingMovies(movies);
+        } catch (error) {
+            console.error(`Error fetching trending movies: ${error}`);
+        }
+    }
